@@ -1,0 +1,122 @@
+/* Tokyo Night color palette */
+:root {
+  --bg: #1a1b26;
+  --bg-alt: #24283b;
+  --fg: #a9b1d6;
+  --fg-bright: #c0caf5;
+  --accent: #7aa2f7;
+  --accent-alt: #bb9af7;
+  --border: #3b4261;
+  --max-width: 48rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+header,
+main,
+footer {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+  padding-top: 4rem;
+}
+
+header h1 {
+  color: var(--fg-bright);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--fg);
+  font-size: 1.1rem;
+}
+
+/* Main */
+main {
+  flex: 1;
+}
+
+h2 {
+  color: var(--fg-bright);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Guide list */
+.guide-list {
+  list-style: none;
+}
+
+.guide-list li {
+  padding: 0.75rem 1rem;
+  background: var(--bg-alt);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.guide-list a:hover {
+  color: var(--accent-alt);
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--border);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
